@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Guruguru</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.23.0/css/uikit.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
-    
+    {{> header }}
+    <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+        {{{ body }}}
+    </div>
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/uikit/2.23.0/js/uikit.min.js"></script>
 </body>
 </html>
