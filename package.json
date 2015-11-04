@@ -12,7 +12,7 @@
     "url": "https://github.com/sweetim/Guruguru-Server"
   },
   "engines": {
-    "node": ">5.0.0"  
+    "node": ">=5.0.0"  
   },
   "author": "Tim",
   "license": "MIT",
