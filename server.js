@@ -22,6 +22,16 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
+app.get('/restaurant', (req, res) => {
+    res.render('restaurant');
+})
+
+app.get('*', (req, res, next) => {
+    res.send('haha')
+})
+
+
+
 const server = app.listen(config.port, () => {
     const port = server.address().port;
 
