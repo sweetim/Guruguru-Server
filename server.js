@@ -5,6 +5,7 @@ let bodyParser = require('body-parser');
 let expressHandleBar = require('express-handlebars');
 
 let config = require('./config/all');
+let apiRouter = require('./routes/api');
 
 let app = express();
 
@@ -26,11 +27,7 @@ app.get('/restaurant', (req, res) => {
     res.render('restaurant');
 })
 
-app.get('*', (req, res, next) => {
-    res.send('haha')
-})
-
-
+app.use('/api', apiRouter);
 
 const server = app.listen(config.port, () => {
     const port = server.address().port;
