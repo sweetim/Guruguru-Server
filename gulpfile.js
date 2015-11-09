@@ -1,7 +1,7 @@
 'use strict';
 
 let gulp = require('gulp');
-let jshint = require('gulp-jshint');
+let eslint = require('gulp-eslint');
 let stylish = require('jshint-stylish');
 
 const PATH = {
@@ -10,12 +10,13 @@ const PATH = {
         './components/*.jsx',
         './*.js'
     ]
-}
+};
 
 gulp.task('lint', () => {
     return gulp.src(PATH.js)
-        .pipe(jshint())
-        .pipe(jshint.reporter(stylish));
+        .pipe(eslint())
+        .pipe(eslint.format())
+        .pipe(eslint.failOnError());
 });
 
 gulp.task('watch', () => {

@@ -3,7 +3,7 @@
 let express = require('express');
 let router = express.Router();
 
-router.get('/', (req, res, next) => {
+router.get('/', (req, res) => {
     res.json([
         {
             name: 'Ramen Dai',
@@ -45,7 +45,7 @@ router.get('/', (req, res, next) => {
                 },
             ]
         }
-    ])
+    ]);
 });
 
 module.exports = router;

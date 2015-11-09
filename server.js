@@ -9,7 +9,7 @@ let expressHandleBar = require('express-handlebars');
 let config = require('./config/all');
 
 let apiRoutes = require('./routes/api');
-let mainRoutes = require('./routes/main')
+let mainRoutes = require('./routes/main');
 
 let app = express();
 
