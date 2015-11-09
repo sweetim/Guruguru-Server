@@ -26,6 +26,9 @@
   "devDependencies": {
     "babel-core": "^6.1.2",
     "babel-preset-es2015": "^6.1.2",
-    "babel-preset-react": "^6.1.2"
+    "babel-preset-react": "^6.1.2",
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.12.0",
+    "jshint-stylish": "^2.0.1"
   }
 }
