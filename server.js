@@ -1,5 +1,7 @@
 'use strict';
 
+require('babel-core/register');
+
 let express = require('express');
 let bodyParser = require('body-parser');
 let expressHandleBar = require('express-handlebars');
