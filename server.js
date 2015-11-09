@@ -1,11 +1,15 @@
 'use strict';
 
+require('babel-core/register');
+
 let express = require('express');
 let bodyParser = require('body-parser');
 let expressHandleBar = require('express-handlebars');
 
 let config = require('./config/all');
-let apiRouter = require('./routes/api');
+
+let apiRoutes = require('./routes/api');
+let mainRoutes = require('./routes/main')
 
 let app = express();
 
@@ -19,15 +23,8 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
-    res.render('home');
-});
-
-app.get('/restaurant', (req, res) => {
-    res.render('restaurant');
-})
-
-app.use('/api', apiRouter);
+app.use('/', mainRoutes);
+app.use('/api', apiRoutes);
 
 const server = app.listen(config.port, () => {
     const port = server.address().port;
