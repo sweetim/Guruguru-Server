@@ -1,9 +1,8 @@
 'use strict';
 
-let React = require('react');
-let ReactDOMServer = require('react-dom/server');
+const React = require('react');
 
-let RestaurantPage = React.createClass({
+const RestaurantPage = React.createClass({
     render: function() {
         return (
             <div>

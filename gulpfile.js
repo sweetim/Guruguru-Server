@@ -1,8 +1,7 @@
 'use strict';
 
-let gulp = require('gulp');
-let eslint = require('gulp-eslint');
-let stylish = require('jshint-stylish');
+const gulp = require('gulp');
+const eslint = require('gulp-eslint');
 
 const PATH = {
     js: [

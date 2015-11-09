@@ -2,16 +2,16 @@
 
 require('babel-core/register');
 
-let express = require('express');
-let bodyParser = require('body-parser');
-let expressHandleBar = require('express-handlebars');
+const express = require('express');
+const bodyParser = require('body-parser');
+const expressHandleBar = require('express-handlebars');
 
-let config = require('./config/all');
+const config = require('./config/all');
 
-let apiRoutes = require('./routes/api');
-let mainRoutes = require('./routes/main');
+const apiRoutes = require('./routes/api');
+const mainRoutes = require('./routes/main');
 
-let app = express();
+const app = express();
 
 app.engine('handlebars', expressHandleBar({
     defaultLayout: 'main'
