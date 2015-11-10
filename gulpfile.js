@@ -1,25 +1,37 @@
 'use strict';
 
 const gulp = require('gulp');
-const eslint = require('gulp-eslint');
+const plugins = require('gulp-load-plugins')();
 
 const PATH = {
     js: [
         './routes/**/*.js',
         './components/*.jsx',
         './*.js'
+    ],
+    test: [
+        './test/**/*.test.js'
     ]
 };
 
 gulp.task('lint', () => {
     return gulp.src(PATH.js)
-        .pipe(eslint())
-        .pipe(eslint.format())
-        .pipe(eslint.failOnError());
+        .pipe(plugins.eslint())
+        .pipe(plugins.eslint.format())
+        .pipe(plugins.eslint.failOnError());
 });
 
-gulp.task('watch', () => {
+gulp.task('mocha', () => {
+    return gulp.src(PATH.test, { read: false })
+        .pipe(plugins.mocha());
+});
+
+gulp.task('watch-mocha', () => {
+    gulp.watch(PATH.js.concat(PATH.test), ['mocha']);
+});
+
+gulp.task('watch-lint', () => {
     gulp.watch(PATH.js, ['lint']);
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['watch-mocha']);
