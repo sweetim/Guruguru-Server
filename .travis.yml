@@ -6,3 +6,4 @@ deply:
   username: AZURE_USERNAME
   password: AZURE_PASSWORD
   site: AZURE_SITE
+  on: master
