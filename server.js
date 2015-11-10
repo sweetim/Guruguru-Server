@@ -31,3 +31,5 @@ const server = app.listen(config.port, () => {
 
     console.log(`Server started in port ${port}`);
 });
+
+module.exports = server;
