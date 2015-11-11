@@ -6,7 +6,7 @@ const plugins = require('gulp-load-plugins')();
 const PATH = {
     js: [
         './routes/**/*.js',
-        './components/*.jsx',
+        './components/**/*.jsx',
         './*.js'
     ],
     test: [
@@ -34,4 +34,5 @@ gulp.task('watch-lint', () => {
     gulp.watch(PATH.js, ['lint']);
 });
 
+gulp.task('test', ['lint', 'mocha']);
 gulp.task('default', ['watch-mocha']);

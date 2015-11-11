@@ -27,9 +27,7 @@ app.use('/', mainRoutes);
 app.use('/api', apiRoutes);
 
 const server = app.listen(config.port, () => {
-    const port = server.address().port;
 
-    console.log(`Server started in port ${port}`);
 });
 
 module.exports = server;
