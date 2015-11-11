@@ -23,7 +23,7 @@ gulp.task('lint', () => {
 
 gulp.task('mocha', () => {
     return gulp.src(PATH.test, { read: false })
-        .pipe(plugins.mocha());
+        .pipe(plugins.spawnMocha());
 });
 
 gulp.task('watch-mocha', () => {
