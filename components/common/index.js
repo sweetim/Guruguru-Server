@@ -1,11 +1,13 @@
 'use strict';
 
-let cover = require('./cover');
-let coverFeature = require('./coverFeature');
-let footer = require('./footer');
+const cover = require('./cover');
+const coverFeature = require('./coverFeature');
+const footer = require('./footer');
+const jumbotron = require('./jumbotron');
 
 module.exports = {
     Cover: cover,
     CoverFeature: coverFeature,
-    Footer: footer
+    Footer: footer,
+    Jumbotron: jumbotron
 };
