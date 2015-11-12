@@ -18,8 +18,7 @@ gulp.task('lint', () => {
     return gulp.src(PATH.js)
         .pipe(plugins.eslint())
         .pipe(plugins.eslint.format())
-        .pipe(plugins.eslint.failOnError())
-        .pipe(plugins.livereload());
+        .pipe(plugins.eslint.failOnError());
 });
 
 gulp.task('mocha', () => {
@@ -32,7 +31,6 @@ gulp.task('watch-mocha', () => {
 });
 
 gulp.task('watch-lint', () => {
-    plugins.livereload.listen({ quiet: true });
     gulp.watch(PATH.js, ['lint']);
 });
 
