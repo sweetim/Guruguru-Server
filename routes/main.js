@@ -10,7 +10,11 @@ const router = express.Router();
 const MainPage = React.createFactory(require('../components/main'));
 
 router.get('/', (req, res) => {
-    res.render('home');
+    const markup = ReactDOMServer.renderToStaticMarkup(MainPage(content.mainPage));
+
+    res.render('layouts/main', {
+        body: markup
+    });
 });
 
 router.get('/restaurant', (req, res) => {
