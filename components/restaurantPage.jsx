@@ -12,9 +12,11 @@ const RestaurantPage = React.createClass({
         features: React.PropTypes.array.isRequired
     },
     render: function() {
-        const featureNodes = this.props.features.map((item) => {
+        const featureNodes = this.props.features.map((item, i) => {
             return (
-                <CoverFeature title={item.title} description={item.description} image={item.image}/>
+                <div className="uk-width-medium-1-3">
+                    <CoverFeature key={i} title={item.title} description={item.description} image={item.image}/>
+                </div>
             );
         });
 

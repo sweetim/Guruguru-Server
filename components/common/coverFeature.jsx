@@ -10,12 +10,10 @@ const CoverFeature = React.createClass({
     },
     render: function() {
         return (
-            <div className="uk-width-medium-1-3">
-                <div className="uk-panel">
-                    <img className="uk-border-circle uk-margin-top" src={this.props.image} width="100" height="100" alt={this.props.title}></img>
-                    <h2 className="uk-h3">{this.props.title}</h2>
-                    <p>{this.props.description}</p>
-                </div>
+            <div className="uk-panel">
+                <img className="uk-border-circle uk-margin-top" src={this.props.image} width="100" height="100" alt={this.props.title}></img>
+                <h2 className="uk-h3">{this.props.title}</h2>
+                <p>{this.props.description}</p>
             </div>
         );
     }
