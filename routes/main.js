@@ -12,7 +12,7 @@ const MainPage = React.createFactory(require('../components/main'));
 router.get('/', (req, res) => {
     const markup = ReactDOMServer.renderToStaticMarkup(MainPage(content.mainPage));
 
-    res.render('layouts/main', {
+    res.render('main', {
         body: markup
     });
 });
@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
 router.get('/restaurant', (req, res) => {
     const markup = ReactDOMServer.renderToStaticMarkup(MainPage(content.mainPage));
 
-    res.render('layouts/main', {
+    res.render('main', {
         body: markup
     });
 });
