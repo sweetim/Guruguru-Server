@@ -27,6 +27,16 @@ gulp.task('mocha', () => {
         .pipe(plugins.spawnMocha());
 });
 
+gulp.task('monitor', () => {
+    plugins.nodemon({
+        script: 'server.js',
+        ext: 'js jsx html',
+        env: {
+            'DEBUG': 'main:*'
+        }
+    });
+});
+
 gulp.task('watch-mocha', () => {
     gulp.watch(PATH.js.concat(PATH.test), ['mocha']);
 });

@@ -4,9 +4,9 @@
   "description": "web services for restaurant",
   "main": "server.js",
   "scripts": {
-    "test": "node_modules/.bin/gulp test",
     "start": "node server.js",
-    "dev": "set DEBUG=main:* && node server.js"
+    "test": "node_modules/.bin/gulp test",
+    "dev": "node_modules/.bin/gulp monitor"
   },
   "repository": {
     "type": "git",
@@ -35,8 +35,8 @@
     "eslint-plugin-react": "^3.8.0",
     "gulp": "^3.9.0",
     "gulp-eslint": "^1.0.0",
-    "gulp-istanbul": "^0.10.2",
     "gulp-load-plugins": "^1.1.0",
+    "gulp-nodemon": "^2.0.4",
     "gulp-spawn-mocha": "^2.2.1",
     "mocha": "^2.3.3",
     "really-need": "^1.7.0",
