@@ -5,9 +5,7 @@ const plugins = require('gulp-load-plugins')();
 
 const PATH = {
     js: [
-        './content/*.js',
-        './routes/**/*.js',
-        './components/**/**',
+        './app/**/**/*.js',
         './*.js'
     ],
     test: [
