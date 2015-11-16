@@ -2,7 +2,7 @@
 
 const React = require('react');
 
-const Common = require('./../common');
+const Common = require('../common');
 const Feature = require('./feature');
 const Mobile = require('./mobile');
 

@@ -3,7 +3,7 @@
 const ReactDOMServer = require('react-dom/server');
 const React = require('react');
 const express = require('express');
-const content = require('.././content/en');
+const content = require('../content/en');
 
 const router = express.Router();
 

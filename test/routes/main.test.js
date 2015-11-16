@@ -7,7 +7,7 @@ describe('Main routes', () => {
     let server;
 
     beforeEach(() => {
-        server = requireUncached('../.././server', { bustCache: true });
+        server = requireUncached('../../server', { bustCache: true });
     });
 
     afterEach((done) => {
