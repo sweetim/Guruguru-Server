@@ -3,11 +3,12 @@
 const request = require('supertest');
 const requireUncached = require('really-need');
 
-describe('Main routes', () => {
+describe('Website application', () => {
     let server;
 
     beforeEach(() => {
-        server = requireUncached('../../server', { bustCache: true });
+        server = requireUncached('../../app/website', { bustCache: true });
+        server = server.listen(3000);
     });
 
     afterEach((done) => {
