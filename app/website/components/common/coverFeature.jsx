@@ -10,7 +10,7 @@ const CoverFeature = React.createClass({
     },
     render: function() {
         return (
-            <div className="uk-panel">
+            <div className="uk-panel" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true}">
                 <img
                     className="uk-border-circle uk-margin-top"
                     src={this.props.image}

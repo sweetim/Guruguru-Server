@@ -17,6 +17,7 @@ const MainPage = React.createClass({
         return (
             <div>
                 <Common.Jumbotron
+                    animation={false}
                     title={this.props.header.title}
                     description={this.props.header.description}
                     image={this.props.header.image}

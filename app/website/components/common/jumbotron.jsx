@@ -8,6 +8,7 @@ const Jumbotron = React.createClass({
         height: React.PropTypes.number,
         description: React.PropTypes.string,
         image: React.PropTypes.string.isRequired,
+        animation: React.PropTypes.bool,
         button: React.PropTypes.shape({
             title: React.PropTypes.string.isRequired,
             link: React.PropTypes.string.isRequired
@@ -15,7 +16,8 @@ const Jumbotron = React.createClass({
     },
     getDefaultProps: function() {
         return {
-            height: 550
+            height: 550,
+            animation: true
         };
     },
     render: function() {
@@ -26,9 +28,11 @@ const Jumbotron = React.createClass({
             height: this.props.height,
         };
 
+        const animationAttrs = this.props.animation && "{cls:'uk-animation-fade', repeat: true}";
+
         return (
             <div className="uk-grid">
-                <div className="uk-width-medium-1-1">
+                <div className="uk-width-medium-1-1" data-uk-scrollspy={animationAttrs}>
                     <div className="uk-vertical-align uk-text-center" style={jumbotronStyle}>
                         <div className="uk-vertical-align-middle uk-width-medium-1-2 uk-width-small-1-1">
                             <h1 className="uk-heading-large">{this.props.title}</h1>
