@@ -3,12 +3,14 @@
 const request = require('supertest');
 const requireUncached = require('really-need');
 
+const config = require('../../config/all');
+
 describe('API application', () => {
     let server;
 
     beforeEach(() => {
         server = requireUncached('../../app/api', { bustCache: true });
-        server = server.listen(3000);
+        server = server.listen(config.port);
     });
 
     afterEach((done) => {
