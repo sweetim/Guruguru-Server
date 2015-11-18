@@ -1,0 +1,6 @@
+verbose: false
+instrumentation:
+    root: .
+    excludes: ['server.js', 'gulpfile.js']
+    extension: ['.js', '.jsx']
+    include-all-sources: true

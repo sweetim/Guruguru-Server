@@ -5,8 +5,10 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "node_modules/.bin/gulp test",
-    "dev": "node_modules/.bin/gulp monitor"
+    "test": "gulp test",
+    "dev": "gulp monitor",
+    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha",
+    "code": "type coverage/lcov.info | node_modules/.bin/codecov"
   },
   "repository": {
     "type": "git",
@@ -23,10 +25,12 @@
     "babel-preset-react": "^6.1.2",
     "body-parser": "^1.14.1",
     "classnames": "^2.2.0",
+    "codecov.io": "^0.1.6",
     "compression": "^1.6.0",
     "debug": "^2.2.0",
     "express": "^4.13.3",
     "express-handlebars": "^2.0.1",
+    "istanbul": "^0.4.0",
     "react": "^0.14.2",
     "react-dom": "^0.14.2"
   },
