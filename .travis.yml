@@ -3,7 +3,4 @@ node_js:
   - "5.0"
 deploy:
   provider: azure_web_apps
-  username: AZURE_USERNAME
-  password: AZURE_PASSWORD
-  site: AZURE_SITE
   on: master
