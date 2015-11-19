@@ -1,7 +1,8 @@
 language: node_js
 node_js:
   - "5.0"
+script:
+  - "npm run test-travis"
 deploy:
   provider: azure_web_apps
-  verbose: true
   on: master
