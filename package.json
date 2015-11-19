@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "gulp test",
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec && cat ./coverage/coverage.json | ./node_modules/codecov.io/bin/codecov.io.js",
     "dev": "gulp monitor",
     "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha",
     "code": "type coverage/lcov.info | node_modules/.bin/codecov"
@@ -33,6 +33,7 @@
     "react-dom": "^0.14.2"
   },
   "devDependencies": {
+    "codecov.io": "^0.1.6",
     "eslint-config-airbnb": "^1.0.0",
     "eslint-plugin-react": "^3.8.0",
     "gulp": "^3.9.0",
@@ -40,8 +41,8 @@
     "gulp-load-plugins": "^1.1.0",
     "gulp-nodemon": "^2.0.4",
     "gulp-spawn-mocha": "^2.2.1",
+    "istanbul": "^0.4.0",
     "really-need": "^1.7.0",
-    "supertest": "^1.1.0",
-    "istanbul": "^0.4.0"
+    "supertest": "^1.1.0"
   }
 }
